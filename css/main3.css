@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+}
+
+.container {
+  display: grid;
+  /* grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr 3fr 1fr; */
+  /*
+      แถวแรกของเราเป็นพื้นที่ของ header ทั้งสองคอลัมภ์
+      แถวที่สอง คอลัมภ์แรกเป็นพื้นที่ของ sidebar ส่วนคอลัมภ์ที่สองเป็นพื้นที่ของ main
+      แถวสุดท้าย พื้นที่ทั้งหมดเป็นของ footer
+    */
+
+  /* มันคือ <grid-template-rows> / <grid-template-columns> */
+
+  /* grid-template-areas:
+    "header header" 1fr
+    "sidebar main" 3fr
+    "footer footer" 1fr
+    / 1fr 3fr; */
+
+  grid-template:
+    "header header" 1fr
+    "sidebar main" 3fr
+    "footer footer" 1fr
+    / 1fr 3fr;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+}
+
+.container > * {
+  padding: 10px;
+}
+
+.header {
+  background: #8cc152;
+  /* ที่เหลือก็แค่บอกว่า Grid Item แต่ละตัวจะวางไว้บนพื้นที่ชื่ออะไร */
+  grid-area: header;
+}
+
+.main {
+  background: #f6bb42;
+  grid-area: main;
+}
+
+.sidebar {
+  background: #e9573f;
+  grid-area: sidebar;
+}
+
+.footer {
+  background: #d770ad;
+  grid-area: footer;
+}

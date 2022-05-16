@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 50px 200px 50px;
+  grid-template-columns: 200px 500px;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+}
+
+.container > * {
+  padding: 10px;
+}
+
+.header {
+  background: #8cc152;
+  /* -1 หมายถึง Grid Line เส้นขวาสุด */
+  /* grid-column: 1 / -1; */
+
+  /* span 2 หมายถึงให้ header กินพื้นที่ไป 2 Grid Column Track */
+  grid-column: 1 / span 2;
+
+  /* grid-column: 1 / 3; */
+  /* grid-column-start: 1; */
+  /* พื้นที่ของ Header จะไปสิ้นสุดที่ Grid Line แนวตั้งเส้นที่ 3 */
+  /* grid-column-end: 3; */
+}
+
+.main {
+  background: #f6bb42;
+}
+
+.sidebar {
+  background: #e9573f;
+}
+
+.footer {
+  background: #d770ad;
+  /* grid-column: 1 / -1; */
+
+  grid-column: 1 / span 2;
+
+  /* grid-column: 1 / 3; */
+  /* grid-column-start: 1;
+  grid-column-end: 3; */
+}
